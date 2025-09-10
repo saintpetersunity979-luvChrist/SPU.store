@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Social Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+     background-image:url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXF5cGd3MHhvNjh4ODMxM250M2plMmNsYmZpbTN4NDE4cWI1d215OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GuqRKH57wXTCClVnOF/giphy.gif);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 1rem;
+    }
+
+    .link-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 12px;
+      transition: background 0.3s, transform 0.2s;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .social-link:hover {
+      background: #333;
+      transform: scale(1.03);
+    }
+
+    .social-link i {
+      margin-right: 10px;
+    }
+
+    .copy-btn {
+      margin-top: 2rem;
+      background: #444;
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: #666;
+    }
+  </style>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <img height="120" width="120" src="albumcover.jpg" alt="love Christ" class="profile-jpg">
+  <h1>Stream sonnets for saints</h1>
+
+  <div class="link-container">
+    <a href="https://facebook.com/yourprofile" class="social-link" target="_blank">
+      <i class="fab fa-facebook"></i> Spotify 
+    </a>
+    <a href="https://instagram.com/yourprofile" class="social-link" target="_blank">
+      <i class="fab fa-instagram"></i> Apple Music 
+    </a>
+    <a href="https://twitter.com/yourprofile" class="social-link" target="_blank">
+      <i class="fab fa-twitter"></i> YouTube 
+    </a>
+    <a href="https://www.yaga.co.za/neon-goth" class="social-link">
+      <i class="fas fa-envelope"></i> Purchase a physical copy
+    </a>
+  </div>
+
+  <button class="copy-btn" onclick="copyLink()">Copy My Link Hub</button>
+
+  <script>
+    function copyLink() {
+      const dummyLink = "https://yourlinkhub.com/username";
+      navigator.clipboard.writeText(dummyLink).then(() => {
+        alert("Link copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
